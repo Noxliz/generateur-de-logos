@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Logos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Logos</h1>
+        <div class="app-container">
+            <div class="controls">
+                <div class="form-group">
+                    <label for="brand-name">Nom de la marque</label>
+                    <input type="text" id="brand-name" placeholder="Entrez le nom de votre marque">
+                </div>
+
+                <div class="form-group">
+                    <label for="slogan">Slogan (optionnel)</label>
+                    <input type="text" id="slogan" placeholder="Entrez un slogan">
+                </div>
+
+                <div class="form-group">
+                    <label for="primary-color">Couleur principale</label>
+                    <input type="color" id="primary-color" value="#3498db">
+                </div>
+
+                <div class="form-group">
+                    <label for="secondary-color">Couleur secondaire</label>
+                    <input type="color" id="secondary-color" value="#2ecc71">
+                </div>
+
+                <div class="form-group">
+                    <label for="font-select">Police d'écriture</label>
+                    <select id="font-select"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="icon-select">Icône</label>
+                    <select id="icon-select">
+                        <option value="">Aucune icône</option>
+                        <!-- Les options seront ajoutées dynamiquement -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preset-select">Style prédéfini</label>
+                    <select id="preset-select"></select>
+                </div>
+
+                <button id="generate-random">Générer aléatoirement</button>
+                <button id="save-logo">Sauvegarder</button>
+                <button id="history">Historique</button>
+
+                <div class="export-buttons">
+                    <button id="export-png" class="export-btn">Exporter PNG</button>
+                    <button id="export-svg" class="export-btn">Exporter SVG</button>
+                </div>
+            </div>
+
+            <div class="preview">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <!-- L'icône SVG sera insérée ici -->
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-name">MonLogo</div>
+                        <div class="logo-slogan"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
